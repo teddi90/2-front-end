@@ -1,0 +1,251 @@
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+        url('../fonts/poppins-v15-latin-regular.woff2') format('woff2'),
+        url('../fonts/poppins-v15-latin-regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    src: local(''),
+        url('../fonts/poppins-v15-latin-500.woff2') format('woff2'),
+        url('../fonts/poppins-v15-latin-500.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    src: local(''),
+        url('../fonts/poppins-v15-latin-600.woff2') format('woff2'),
+        url('../fonts/poppins-v15-latin-600.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+        url('../fonts/poppins-v15-latin-700.woff2') format('woff2'),
+        url('../fonts/poppins-v15-latin-700.woff') format('woff');
+}
+
+body {
+    font-family: 'Poppins';
+    font-style: 500;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.container {
+    max-width: 1110px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.row {
+    margin: 0 -15px;
+
+}
+
+.row:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+[class*=col-] {
+    float: left;
+    padding: 0 15px;
+    box-sizing: border-box;
+
+}
+
+.col-1-4 {
+    width: 25%;
+}
+
+.col-1-2 {
+    width: 50%;
+}
+
+nav {
+    padding: 31px 0 50px;
+}
+
+.header-logo {
+    display: inline-block;
+    margin-top: 8px;
+}
+
+.menu-list {
+    text-align: right;
+}
+
+.menu-list li {
+    display: inline-block;
+}
+
+.menu-list li:not(:last-child) {
+    margin-right: 25px;
+}
+
+.menu-list li a {
+    display: block;
+    color: black;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 18px 0;
+    transition: color ease-in-out .3s;
+}
+
+.menu-list li a:hover {
+    color: #FF9900;
+}
+
+[class*=btn-] {
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.btns-wrapper {
+    text-align: right;
+}
+
+.btn-orange {
+    background-color: #FF9900;
+    color: #fff;
+    transition: opacity ease-in-out .3s;
+}
+
+.btn-orange:hover {
+    opacity: 0.8;
+}
+
+header .btn-orange {
+    padding: 16px 25px;
+    font-weight: 600;
+}
+
+.btn-white {
+    padding: 16px 25px;
+    color: #173A56;
+    border: 1px solid #BCD0E5;
+    font-weight: 600;
+    margin-right: 14px;
+    transition: all ease-in-out .3s;
+}
+
+.btn-white:hover {
+    color: #FF9900;
+    border-color: #FF9900;
+}
+
+.header-content img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 54px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+header {
+    margin-bottom: 110px;
+}
+
+header p {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    padding-right: 82px;
+    margin-bottom: 45px;
+}
+
+.header-content .btn-orange {
+    padding: 20px 40px;
+    font-weight: 700;
+    margin-right: 57px;
+}
+
+.video-btn {
+    font-weight: 600;
+    color: #FF9900;
+    text-decoration: underline;
+    display: inline-block;
+    position: relative;
+    transition: opacity ease-in-out .3s;
+}
+
+.video-btn:hover {
+    opacity: 0.8;
+}
+
+.video-btn::before {
+    content: "";
+    display: block;
+    height: 18px;
+    width: 17px;
+    background-image: url(../images/triangle.svg);
+    position: absolute;
+    left: -26px;
+}
+
+.advantage {
+    margin-bottom: 220px;
+}
+
+.advantage h2 {
+    text-align: center;
+    margin-bottom: 54px;
+}
+
+.advantage figure {
+    margin: 0;
+    margin-left: 16px;
+}
+
+.advantage figure img {
+    margin-bottom: 30px;
+}
+
+.advantage h3 {
+    margin: 0 0 13px 0;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.advantage p {
+    margin-bottom: 34px;
+}
+
+.advantage .btns-wrapper {
+    text-align: center;
+}
+
+.advantage .btn-orange {
+    padding: 20px 33px 16px 33px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
