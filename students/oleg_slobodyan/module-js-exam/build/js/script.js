@@ -33,6 +33,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_splice_js__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_splice_js__WEBPACK_IMPORTED_MODULE_10__);
 /* harmony import */ var core_js_modules_es_array_slice_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! core-js/modules/es.array.slice.js */ "./node_modules/core-js/modules/es.array.slice.js");
 /* harmony import */ var core_js_modules_es_array_slice_js__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_slice_js__WEBPACK_IMPORTED_MODULE_11__);
+function _readOnlyError(name) { throw new TypeError("\"" + name + "\" is read-only"); }
+
 
 
 
@@ -81,9 +83,9 @@ var Comments = /*#__PURE__*/function () {
     this.editCommentIndex = null;
     this.replyCommentIndex = null;
     /*=========== Localstorage ===========*/
+    // localStorage.setItem('users', JSON.stringify([]));
 
-    this.usersList = this.getUserList();
-    localStorage.setItem('users', JSON.stringify(this.usersList)); // localStorage.clear('users');
+    this.usersList = this.getUserList(); // localStorage.clear('users');
 
     /*=========== Events ===========*/
 
@@ -272,6 +274,11 @@ var Comments = /*#__PURE__*/function () {
     key: "getUserList",
     value: function getUserList() {
       var localStorageData = JSON.parse(localStorage.getItem('users'));
+
+      if (!localStorageData) {
+        localStorage.setItem('users', JSON.stringify([])), _readOnlyError("localStorageData");
+      }
+
       return localStorageData.length ? localStorageData : [{
         userMessageId: 44566778545,
         pubDate: 1651580231152,
