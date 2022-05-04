@@ -24,8 +24,8 @@ class Comments {
         this.replyCommentIndex = null;
 
         /*=========== Localstorage ===========*/
+        // localStorage.setItem('users', JSON.stringify([]));
         this.usersList = this.getUserList();
-        localStorage.setItem('users', JSON.stringify(this.usersList));
         // localStorage.clear('users');
 
         /*=========== Events ===========*/
@@ -192,6 +192,9 @@ class Comments {
 
     getUserList() {
         const localStorageData = JSON.parse(localStorage.getItem('users'));
+        if (!localStorageData) {
+            localStorageData = localStorage.setItem('users', JSON.stringify([]))
+        }
         return localStorageData.length ? localStorageData : [
             {
                 userMessageId: 44566778545,
